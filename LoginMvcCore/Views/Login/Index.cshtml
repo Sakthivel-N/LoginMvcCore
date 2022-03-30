@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    
+}
+@if (ViewBag.SessionUser != null)
+{
+    <h1>Welcome @ViewBag.SessionUser</h1>
+    <br />
+    <br />
+
+    <a asp-action="UserDashboard">Go to DashBoard</a><br />
+    <a asp-action="Logout">Logout here!!</a>
+}
+else
+{
+    <h1>Welcome User</h1>
+    <br />
+    <br />
+
+    <a asp-action="LoginUser">Login here!!</a><br />
+    <a asp-action="Register">Register </a>
+}
+
+
